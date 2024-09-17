@@ -1,4 +1,4 @@
-# Astro Starter Kit: Minimal
+# Yoo Inmuebles
 
 ```sh
 npm create astro@latest -- --template minimal
@@ -10,9 +10,9 @@ npm create astro@latest -- --template minimal
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## 🚀 Project Structure
+## 🚀 Estructura del Proyecto
 
-Inside of your Astro project, you'll see the following folders and files:
+Dentro de tu proyecto Astro, verás las siguientes carpetas y archivos:
 
 ```text
 /
@@ -23,25 +23,21 @@ Inside of your Astro project, you'll see the following folders and files:
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Astro busca archivos `.astro` o `.md` en el directorio `src/pages/`. Cada página se expone como una ruta basada en su nombre de archivo.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+No hay nada especial acerca de `src/components/`, pero es donde nos gusta colocar cualquier componente de `Astro/React/Vue/Svelte/Preact`.
 
-Any static assets, like images, can be placed in the `public/` directory.
+Cualquier recurso estático, como imágenes, se puede colocar en el directorio `public/`.
 
-## 🧞 Commands
+## 🧞 Comandos
 
-All commands are run from the root of the project, from a terminal:
+Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Command                   | Action                                                      |
+| :------------------------ | :---------------------------------------------------------- |
+| `npm install`             | Instala dependencias                                        |
+| `npm run dev`             | Inicia el servidor de desarrollo local en localhost:4321    |
+| `npm run build`           | Compila tu sitio de producción en ./dist/                   |
+| `npm run preview`         | Previsualiza tu compilación localmente, antes de desplegar  |
+| `npm run astro ...`       | Ejecuta comandos CLI como astro add, astro check            |
+| `npm run astro -- --help` | Obtén ayuda para usar el CLI de Astro                       |
