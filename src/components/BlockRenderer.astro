@@ -1,5 +1,32 @@
 ---
-const {blocks} = Astro.props
+import BlockRendererInner from "./BlockRenderer.astro";
+import { getBlockStyling } from "@wp-block-tools/styles";
+import type { Block } from "@wp-block-tools/styles";
+import type { toAttributeString } from "astro/runtime/server/render/util.js";
+type Props = {
+    blocks: Block[];
+};
+const { blocks } = Astro.props;
 console.log("BLOCK FROM BLOCK RENDERER COMPONENT: ", blocks);
 ---
-<div>block renderer</div>
+
+{
+  blocks.map((block) => {
+    const { styles, classes } = getBlockStyling(block);
+    
+    switch (block.name) {
+      case "core/paragraph":
+        return <p class={classes} style={styles} set:html={block.attributes?.content} />
+      case "core/columns":
+      case "core/column":
+      case "core/post-content":
+        return (
+          <div class={classes} style={styles}>
+            <BlockRendererInner blocks={block.innerBlocks || []} />
+          </div>
+        );
+      default:
+        return null;
+    }
+  })
+}
