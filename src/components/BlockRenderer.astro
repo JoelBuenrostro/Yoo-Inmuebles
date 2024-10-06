@@ -2,7 +2,8 @@
 import BlockRendererInner from "./BlockRenderer.astro";
 import { getBlockStyling } from "@wp-block-tools/styles";
 import type { Block } from "@wp-block-tools/styles";
-import type { toAttributeString } from "astro/runtime/server/render/util.js";
+import { Image } from "astro:assets";
+
 type Props = {
     blocks: Block[];
 };
@@ -16,15 +17,33 @@ console.log("BLOCK FROM BLOCK RENDERER COMPONENT: ", blocks);
     
     switch (block.name) {
       case "core/paragraph":
-        return <p class={classes} style={styles} set:html={block.attributes?.content} />
+        return <p 
+                  class={classes} 
+                  style={styles} 
+                  set:html={block.attributes?.content} 
+               />
       case "core/columns":
       case "core/column":
       case "core/post-content":
+      case "core/group":
         return (
           <div class={classes} style={styles}>
             <BlockRendererInner blocks={block.innerBlocks || []} />
           </div>
         );
+        case 'core/site-logo':
+          return (
+            <div class={classes} style={styles}>
+              <Image 
+                height={block.attributes?.width || "50"}
+                width={block.attributes?.width || "50"}
+                src={block.attributes?.url || ""}
+                alt="Site Logo"
+              />
+            </div>
+          )
+        case 'core/template-part':
+          return <BlockRendererInner blocks={block.innerBlocks || []} />
       default:
         return null;
     }
