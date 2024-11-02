@@ -38,7 +38,7 @@ export default function ContactForm7({ formId, formMarkup }: Props) {
 
   return showSuccessMessage ? (
     <div className="bg-green-600 p-4 text-white font-bold">
-      Thank you for your message!
+      Gracias por tu mensaje
     </div>
   ) : (
     <div

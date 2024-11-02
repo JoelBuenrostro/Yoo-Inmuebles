@@ -3,12 +3,14 @@ import { replaceUrls } from "../utils/replaceUrls";
 import { joinClasses } from "../utils/joinClasses";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+
 type Props = {
   classes: string;
   styles: string;
   label: string;
   url: string;
 };
+
 const { classes, styles, label, url } = Astro.props;
 const allClasses = joinClasses(classes, "group relative");
 const href = replaceUrls(url, Astro.url.host);
