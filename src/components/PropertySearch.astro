@@ -114,7 +114,7 @@ filteredProperties = filteredProperties.slice(offset, offset + pageSize);
           <strong>{property.title}</strong>
         </p>
         <p class="text-3xl" transition:name={`price-${property.databaseId}`}>
-          £{numeral(property.propertyDetails.price).format("0,0")}
+          ${numeral(property.propertyDetails.price).format("0,0")}
         </p>
         <div class="flex gap-8">
           <div transition:name={`beds-${property.databaseId}`}>

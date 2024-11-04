@@ -11,7 +11,6 @@ const {
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://yoo-inmuebles.vercel.app",
   image: {
     domains: [PUBLIC_WP_URL]
   },
