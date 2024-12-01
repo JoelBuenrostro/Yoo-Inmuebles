@@ -1,43 +1,73 @@
 # Yoo Inmuebles
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Bienvenido al repositorio de Yoo Inmuebles, una plataforma web diseñada para la compra, venta y renta de propiedades en Guadalajara, Jalisco. Nuestro objetivo es conectar a propietarios, compradores y arrendatarios mediante una experiencia intuitiva y profesional.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Descripción General
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Yoo Inmuebles es una landing page interactiva y optimizada que utiliza tecnologías modernas como Astro, React, y un backend basado en WordPress Headless CMS. Este proyecto busca proporcionar una plataforma rápida, eficiente y visualmente atractiva para usuarios interesados en el mercado inmobiliario.
 
-## 🚀 Estructura del Proyecto
+## Características Principales
 
-Dentro de tu proyecto Astro, verás las siguientes carpetas y archivos:
+* Evaluaciones de Propiedades: Los usuarios pueden agendar evaluaciones profesionales para conocer el valor de sus propiedades.
+* Guías Detalladas: Información útil para compradores y vendedores, como la página "Guía para vender".
+* Integración con CMS: Contenido dinámico gestionado desde WordPress.
+* SEO Optimizado: Mejora del posicionamiento en buscadores gracias a prácticas modernas de SEO.
+* Diseño Responsivo: Una experiencia perfecta en dispositivos móviles, tablets y escritorio.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Tecnologías Utilizadas
 
-Astro busca archivos `.astro` o `.md` en el directorio `src/pages/`. Cada página se expone como una ruta basada en su nombre de archivo.
+### Frontend
 
-No hay nada especial acerca de `src/components/`, pero es donde nos gusta colocar cualquier componente de `Astro/React/Vue/Svelte/Preact`.
+* Astro: Framework principal para construir sitios rápidos y estáticos con islas de contenido dinámico.
+* React: Utilizado para componentes interactivos dentro de las páginas.
+* Tailwind CSS: Framework para estilos rápidos y consistentes.
 
-Cualquier recurso estático, como imágenes, se puede colocar en el directorio `public/`.
+### Backend
 
-## 🧞 Comandos
+* WordPress (Headless): Gestión del contenido dinámico mediante GraphQL.
+* GraphQL: Consultas de datos eficientes desde el CMS.
 
-Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
+## Infraestructura
 
-| Command                   | Action                                                      |
-| :------------------------ | :---------------------------------------------------------- |
-| `npm install`             | Instala dependencias                                        |
-| `npm run dev`             | Inicia el servidor de desarrollo local en localhost:4321    |
-| `npm run build`           | Compila tu sitio de producción en ./dist/                   |
-| `npm run preview`         | Previsualiza tu compilación localmente, antes de desplegar  |
-| `npm run astro ...`       | Ejecuta comandos CLI como astro add, astro check            |
-| `npm run astro -- --help` | Obtén ayuda para usar el CLI de Astro                       |
+* Vercel: Despliegue rápido, escalable y seguro para aplicaciones web modernas.
+
+## Configuración Inicial
+
+Sigue estos pasos para configurar el proyecto en tu máquina local:
+
+Clona el repositorio:
+
+git clone
+
+cd yoo-inmuebles
+
+Instala las dependencias:
+
+npm install
+
+Inicia el servidor de desarrollo:
+
+npm run dev
+
+Accede a la aplicación en <http://localhost:4321>.
+
+Configura el backend:
+
+* Instala WordPress localmente o en un servidor remoto.
+* Agrega los plugins necesarios, como GraphQL y Advanced Custom Fields.
+* Conecta el frontend a la API GraphQL de WordPress.
+
+## Scripts Disponibles
+
+| npm install | Instala las dependencias del proyecto. |
+| npm run dev | Inicia el servidor de desarrollo. |
+| npm run build | Genera el sitio para producción en ./dist/. |
+| npm run preview | Previsualiza el sitio construido. |
+
+## Contribuciones
+
+¡Siempre estamos abiertos a contribuciones! Si tienes ideas, errores o sugerencias, por favor abre un issue o envía un pull request.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
