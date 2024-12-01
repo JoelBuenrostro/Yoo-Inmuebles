@@ -12,19 +12,19 @@ export async function getStaticPaths() {
     body: JSON.stringify({
       query: `
 			query AllPages {
-        pages(first: 50) {
+				pages(first: 10000){
+					nodes {
+						uri
+            blocks(attributes:false)
+					}
+				}
+        properties(first: 10000) {
           nodes {
             uri
-            blocks
+            blocks(attributes:false)
           }
         }
-        properties(first: 50) {
-          nodes {
-            uri
-            blocks
-          }
-        }
-      }
+			}
 			`,
     }),
   });
